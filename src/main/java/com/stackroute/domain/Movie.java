@@ -5,6 +5,7 @@ import org.springframework.beans.factory.BeanFactoryAware;
 import org.springframework.beans.factory.BeanNameAware;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
+
 public class Movie implements BeanFactoryAware, ApplicationContextAware, BeanNameAware {
     private Actor actor;
     public void setBeanFactory(BeanFactory beanFactory) throws BeansException
