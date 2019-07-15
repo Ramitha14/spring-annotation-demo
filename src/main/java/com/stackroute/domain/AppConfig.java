@@ -1,17 +1,15 @@
 package com.stackroute.domain;
-
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
-
 @Configuration
 public class AppConfig {
     //Movie Bean
     @Bean
     public Movie movieBean1()
     {
-        return new Movie();
+        return new Movie(actorBean1());
     }
 
     //Actor Bean
@@ -21,5 +19,4 @@ public class AppConfig {
         return new Actor("ram","male",30);
 
     }
-
 }
