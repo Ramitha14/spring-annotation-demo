@@ -1,5 +1,6 @@
 package com.stackroute.domain;
 import com.stackroute.demo.BeanLifecycleDemoBean;
+import com.stackroute.demo.BeanPostProcessorDemoBean;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -18,7 +19,7 @@ public class AppConfig {
     @Bean
     public Actor actorBean1()
     {
-        return new Actor("priya","female",21);
+        return new Actor("ram","male",30);
 
     }
     //BeanLifecycleDemoBean
@@ -27,4 +28,11 @@ public class AppConfig {
     {
         return new BeanLifecycleDemoBean();
     }
+    @Bean
+    public BeanPostProcessorDemoBean postProcessor()
+    {
+        return new BeanPostProcessorDemoBean();
+    }
+
+
 }
