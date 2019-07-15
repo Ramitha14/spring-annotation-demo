@@ -12,17 +12,7 @@ public class Main {
     {
         //use ApplicationContext
         ApplicationContext context=new AnnotationConfigApplicationContext(AppConfig.class);
-        // Movie movieA=context.getBean("movieBean1",Movie.class);
-        //movieA.display();
-        Movie movieA1=context.getBean("movieBeanA",Movie.class);
-        movieA1.display();
-        Movie movieA2=context.getBean("movieBeanB",Movie.class);
-        movieA2.display();
-        Movie movieB=context.getBean("movieBean2",Movie.class);
-        movieB.display();
-        Movie movieC=context.getBean("movieBean3",Movie.class);
-        movieC.display();
-        Movie movieD=context.getBean("movieBean3",Movie.class);
-        System.out.println(movieC==movieD);
+        Movie movieA=context.getBean("movieBean1",Movie.class);
+        movieA.display();
     }
 }

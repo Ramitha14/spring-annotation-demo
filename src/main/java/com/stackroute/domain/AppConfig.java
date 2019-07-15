@@ -1,4 +1,5 @@
 package com.stackroute.domain;
+
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -6,47 +7,18 @@ import org.springframework.context.annotation.Scope;
 
 @Configuration
 public class AppConfig {
-    //Movie Beans
-    @Bean(name={"movieBeanA","movieBeanB"})
-    @Scope(value = ConfigurableBeanFactory.SCOPE_PROTOTYPE)
-    public Movie movieBean1() {
-        Movie movie1 = new Movie();
-        movie1.setActor(actorBean1());
-        return movie1;
-    }
+    //Movie Bean
     @Bean
-    @Scope(value = ConfigurableBeanFactory.SCOPE_PROTOTYPE)
-    public Movie movieBean2()
+    public Movie movieBean1()
     {
-        Movie movie2=new Movie();
-        movie2.setActor(actorBean2());
-        return movie2;
+        return new Movie();
     }
-    @Bean
-    @Scope(value = ConfigurableBeanFactory.SCOPE_PROTOTYPE)
-    public Movie movieBean3()
-    {
-        Movie movie3=new Movie();
-        movie3.setActor(actorBean3());
-        return movie3;
-    }
-    //Actor Beans
+
+    //Actor Bean
     @Bean
     public Actor actorBean1()
     {
-        return new Actor("priya","female",21);
-
-    }
-    @Bean
-    public Actor actorBean2()
-    {
-        return new Actor("swetha","female",22);
-
-    }
-    @Bean
-    public Actor actorBean3()
-    {
-        return new Actor("gowtham","male",17);
+        return new Actor("ram","male",30);
 
     }
 
